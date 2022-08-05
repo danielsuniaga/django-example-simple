@@ -1,12 +1,17 @@
+{% load static  %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>{% block title %} {% endblock %}</title>
+        <link rel='stylesheet' href='{% static "css/plantillaBarraNavegacion.css" %}' rel='stylesheet'>
     </head>
     <body>
+        {% include "plantillaBarraNavegacion.html" %}
         <h1 style='color:blue'>TEST1</h1>
+        <img src='{% static "imagenes/image1.jpg"  %}' alt="">
         {% block content %}
         {% endblock %}
         <p>PIE DE PAGINA</p>
+        <script type='text/javascript' src='{% static "js/plantillaPadre.js" %}''></script>
     </body>
 </html>
